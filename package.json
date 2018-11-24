@@ -1,0 +1,24 @@
+{
+  "name": "alurabank",
+  "version": "1.0.0",
+  "description": "Treinamento Caelum TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georgemayko/alurabank.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/georgemayko/alurabank/issues"
+  },
+  "homepage": "https://github.com/georgemayko/alurabank#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^2.3.2"
+  }
+}
