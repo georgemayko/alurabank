@@ -6,6 +6,7 @@ class NegociacaoContoller{
     private _table : HTMLTableElement;
     private _negociacoes = new Negociacoes();
     private _negociacoesView = new NegociacoesView('#negociacoesView');
+    private _mensagemView = new MensagemView('#mensagemView')
 
     constructor(){
         this._inputData = <HTMLInputElement> document.querySelector('#data');
@@ -22,8 +23,8 @@ class NegociacaoContoller{
             parseFloat(this._inputValor.value)
         );
         this._negociacoes.adiciona(negociacao);
-        console.log(this._negociacoes);
         this._negociacoesView.update(this._negociacoes);
+        this._mensagemView.update('Negociação adicionada com sucesso!');
     }
     
     
