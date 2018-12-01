@@ -17,10 +17,15 @@ export class NegociacaoController{
         this._negociacoesView.update(this._negociacoes);
     }
 
-    adiciona(event: Event){
+    adiciona(event: Event) : void{
         event.preventDefault();
+        let data = new Date(this._inputData.val().replace(/-/g, '/'));
+        if(!this._ehDiaUtil(data)){
+            this._mensagemView.update('Somente negociações em dias úteis, por favor!');
+            return 
+        }
         const negociacao = new Negociacao(
-            new Date(this._inputData.val().replace(/-/g, '/')),
+            data,
             parseInt(this._inputQuantidade.val()),
             parseFloat(this._inputValor.val())
         );
@@ -29,4 +34,18 @@ export class NegociacaoController{
         this._mensagemView.update('Negociação adicionada com sucesso!');
     }
     
+    private _ehDiaUtil(data: Date) : boolean{
+        return data.getDay() != DiaDaSemana.SABADO
+               && data.getDay() !=DiaDaSemana.DOMINGO;
+    }
+}
+
+enum DiaDaSemana{
+    DOMINGO,
+    SEGUNTA,
+    TERCA,
+    QUARTA,
+    QUINTA,
+    SEXTA,
+    SABADO
 }
