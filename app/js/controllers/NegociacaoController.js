@@ -1,4 +1,8 @@
-class NegociacaoContoller {
+import { MensagemView } from '../views/MensagemView';
+import { NegociacoesView } from '../views/NegiciacoesView';
+import { Negociacoes } from '../models/Negociacoes';
+import { Negociacao } from '../models/Negociacao';
+export class NegociacaoController {
     constructor() {
         this._negociacoes = new Negociacoes();
         this._negociacoesView = new NegociacoesView('#negociacoesView');

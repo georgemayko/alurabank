@@ -1,4 +1,4 @@
-class Negociacao {
+export class Negociacao {
     constructor(_data, _valor, _quantidade) {
         this._data = _data;
         this._valor = _valor;
