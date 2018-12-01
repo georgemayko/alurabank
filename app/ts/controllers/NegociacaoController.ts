@@ -29,5 +29,4 @@ export class NegociacaoController{
         this._mensagemView.update('Negociação adicionada com sucesso!');
     }
     
-    
 }
